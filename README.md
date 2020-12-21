@@ -109,6 +109,7 @@ Ket: Aktiv 24 jam
 * [`Youtube Admin`](https://www.youtube.com/channel/UCGYLWtyT9IADYNUiK0uZiGg)
 * [`Instagram Admin`](https://instagram.com/_sadboy.ig)
 * [`WhatsApp Admin `](https://wa.me/+6285722553839)
+* [`Group WhatsApp`] (https://chat.whatsapp.com/DSSHmG2KjKJLoFp9B9mkVs)
 ## THANKS TO <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Handshake.gif" width="60px">
 
 * [`fdciabdul`](https://github.com/fdciabdul/termux-whatsapp-bot)
