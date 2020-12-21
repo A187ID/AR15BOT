@@ -30,7 +30,6 @@ const qrcode = require("qrcode-terminal") //ANAK ASU
 const moment = require("moment-timezone") //TOBAT SU
 const fs = require("fs") //SU
 const { color, bgcolor } = require('./lib/color')
-const { pantun, quotes } = require('./lib')
 const { help } = require('./lib/help')
 const { donasi } = require('./lib/donasi')
 const { fetchJson } = require('./lib/fetcher')
@@ -177,7 +176,7 @@ client.on('group-participants-update', async (anu) => {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["6285722553839@s.whatsapp.net"] // replace this with your number
+			const ownerNumber = ["6285722553839@s.whatsapp.net"] // ganti nomer lu
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -225,43 +224,27 @@ client.on('group-participants-update', async (anu) => {
 					case 'Iri':
 					case 'iri?':
             case 'iri':
-                client.sendPtt(from, './mp3/iri.mp3', id)
+                client.sendPtt(from, './aris/iri.mp3', {quoted: mek, ptt:true})
                 break
                 
             case 'abgjago':
             case 'abangjago':
-                client.sendPtt(from, './mp3/abangjago.mp3', id)
+                client.sendPtt(from, './aris/abangjago.mp3', {quoted: mek, ptt:true})
                 break
             case 'tarekses':
             case 'tariksis':
             case 'tareksis':
             case 'tareeksis':
             case 'tareekses':
-                client.sendPtt(from, './mp3/tarekses.mp3', id)
+                client.sendPtt(from, './aris/tarekses.mp3', {quoted: mek, ptt:true})
                 break
             case 'welotka':
             case 'welutka':
             case 'kangcopet':
-                client.sendPtt(dari, './media/welot.mp3', id)
+                client.sendPtt(dari, './aris/welot.mp3',{quoted: mek, ptt:true})
                 break
-                case 'pantun':
-           pantun(value)
-               .then(data => {
-                   client.sendMessage(id, data,MessageType.text)
-               })
-               .catch(err => {
-                   console.log(err)
-               })     
-           break
-           case 'quotes':
-           quotes(value)
-               .then(data => {
-                   client.sendMessage(id, data,MessageType.text)
-               })
-               .catch(err => {
-                   console.log(err)
-               })      
-           break
+                
+                
 				case 'info':
 					me = client.user
 					uptime = process.uptime()
@@ -435,7 +418,7 @@ client.on('group-participants-update', async (anu) => {
 					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/hilih?teks=${body.slice(7)}`, {method: 'get'})
 					reply(anu.result)
 					break
-				/*case 'yt': 
+				case 'yt': 
 					if (args.length < 1) return reply('𝘂𝗿𝗹𝗻𝘆𝗮 𝗺𝗮𝗻𝗮 𝘁𝗼𝗱?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/yta?url=${args[0]}&apiKey=${apiKey}`, {method: 'get'})
@@ -445,7 +428,7 @@ client.on('group-participants-update', async (anu) => {
 					client.sendMessage(from, thumb, image, {quoted: mek, caption: teks})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
-					break*/
+					break
 				case 'ytsearch': 
 					if (args.length < 1) return reply('𝘆𝗮𝗻𝗴 𝗺𝗮𝘂 𝗱𝗶𝗰𝗮𝗿𝗶 𝗮𝗽𝗮 𝘁𝗼𝗱? 𝘁𝘆𝘁𝗱 𝗸𝗮𝗵?')
 					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/ytsearch?q=${body.slice(10)}&apiKey=${apiKey}`, {method: 'get'})
@@ -564,7 +547,8 @@ client.on('group-participants-update', async (anu) => {
 				case 'leave': 
 				if (!isGroup) return reply(mess.only.group)
 					if (!isOwner) return reply(mess.only.ownerB)
-				 client.sendMessage(from, '𝗕𝘆𝗲𝗲').then(() => client.leaveGroup(groupId))
+				await client.client.leaveGroup(from, '𝗕𝘆𝗲𝗲', groupId)
+				 (groupId))
                     break
 				case 'bc': 
 					if (!isOwner) return reply('𝙡𝙪 𝙨𝙞𝙖𝙥𝙖 𝙩𝙤𝙙?') 
@@ -816,7 +800,7 @@ client.on('group-participants-update', async (anu) => {
 *ARIS187 ID
 *ARIS187 ID
 *ANAK ANJING MAU NGAPAIN?
-*HARGAIN CREATOR ASLINYA BOSQUE
+*HARGAIN CREATOR 
 *GUA SUSAH PAYAH BUAT,KALIAN CUMAN MODAL NAMA SU
 *TANPA KASIH CREDITS LAGI,,,,NYESEK SU ASU
 *DIBILANG JANGAN UBAH INFO!!
@@ -825,5 +809,6 @@ client.on('group-participants-update', async (anu) => {
 *ARIS187 ID
 *ARIS187 ID
 *ARIS187ID
+*Thanks for Mank Bar bar
 */
 
