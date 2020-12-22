@@ -216,24 +216,24 @@ client.on('group-participants-update', async (anu) => {
 					case 'Iri':
 					case 'iri?':
             case 'iri':
-                client.sendMessage(from, './aris/iri.mp3', {quoted: mek, ptt:true})
+                client.sendMessage(from, 'aris' + 'iri.mp3', {quoted: mek, ptt:true})
                 break
                 
             case 'abgjago':
             case 'abangjago':
-                client.sendMessage(from, './aris/abangjago.mp3', {quoted: mek, ptt:true})
+                client.sendMessage(from, 'aris' + 'abangjago'+'mp3', {quoted: mek, ptt:true})
                 break
             case 'tarekses':
             case 'tariksis':
             case 'tareksis':
             case 'tareeksis':
             case 'tareekses':
-                client.sendMessage(from, './aris/tarekses.mp3', {quoted: mek, ptt:true})
+                client.sendMessage(from, './aris'+'/tarekses.mp3', {quoted: mek, ptt:true})
                 break
             case 'welotka':
             case 'welutka':
             case 'kangcopet':
-                client.sendMessage(dari, './aris/welot.mp3',{quoted: mek, ptt:true})
+                client.sendMessage(dari, './aris'+'welot'+'mp3',{quoted: mek, ptt:true})
                 break
                 
                 
