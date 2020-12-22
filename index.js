@@ -347,6 +347,11 @@ client.on('group-participants-update', async (anu) => {
 						reply(`𝗸𝗶𝗿𝗶𝗺 𝗴𝗮𝗺𝗯𝗮𝗿 𝗱𝗲𝗻𝗴𝗮𝗻 𝗰𝗲𝗽𝘁𝗶𝗼𝗻 ${prefix}𝘀𝘁𝗶𝗰𝗸𝗲𝗿 𝗮𝘁𝗮𝘂 𝗿𝗲𝗽𝗹𝘆/𝘁𝗮𝗴 𝗴𝗮𝗺𝗯𝗮𝗿`)
 					}
 					break
+				case 'getses':
+            	if (!isOwner) return reply(mess.only.ownerB)
+            const sesPic = await client.getSnapshot()
+            client.sendFile(from, sesPic, 'session.png', '𝘁𝗼𝗱 ^_^...', id)
+            break	
 				case 'gtts':	
 				case 'tts':
 					if (args.length < 1) return client.sendMessage(from, '𝗱𝗶𝗽𝗲𝗿𝗹𝘂𝗸𝗮𝗻 𝗸𝗼𝗱𝗲 𝗯𝗮𝗵𝗮𝘀𝗮 𝘁𝗼𝗱!', text, {quoted: mek})
