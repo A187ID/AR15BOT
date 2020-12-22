@@ -1,16 +1,7 @@
 /*
-* JANGAN UBAH-UBAH INFO!!!
-* "JANGAN MODAL NAMA DOANG BRO!!!"
-* SCRIPT BY ARIS187 ID
-* Thanks For MhankBarBar
-* JANGAN MODAL NAMA DOANG BOSQ
-* HARGAILAH YG MEMBUAT SCRIPT INI BOSQ
-* JANGAN UBAH-UBAH INFO!!!
-* ARIS187 ID
-*
-SCRIPT EHH LU CUMAN MODAL NAMA CUK
-* KASIH CREDITS LAH BOSQUE ARIS187ID
+* Thanks For 𝗠𝗵𝗮𝗻𝗸𝗕𝗮𝗿𝗕𝗮𝗿
 */
+
 const
 {
    WAConnection,
@@ -225,24 +216,24 @@ client.on('group-participants-update', async (anu) => {
 					case 'Iri':
 					case 'iri?':
             case 'iri':
-                client.sendPtt(from, './aris/iri.mp3', {quoted: mek, ptt:true})
+                client.sendMessage(from, './aris/iri.mp3', {quoted: mek, ptt:true})
                 break
                 
             case 'abgjago':
             case 'abangjago':
-                client.sendPtt(from, './aris/abangjago.mp3', {quoted: mek, ptt:true})
+                client.sendMessage(from, './aris/abangjago.mp3', {quoted: mek, ptt:true})
                 break
             case 'tarekses':
             case 'tariksis':
             case 'tareksis':
             case 'tareeksis':
             case 'tareekses':
-                client.sendPtt(from, './aris/tarekses.mp3', {quoted: mek, ptt:true})
+                client.sendMessage(from, './aris/tarekses.mp3', {quoted: mek, ptt:true})
                 break
             case 'welotka':
             case 'welutka':
             case 'kangcopet':
-                client.sendPtt(dari, './aris/welot.mp3',{quoted: mek, ptt:true})
+                client.sendMessage(dari, './aris/welot.mp3',{quoted: mek, ptt:true})
                 break
                 
                 
@@ -254,7 +245,7 @@ client.on('group-participants-update', async (anu) => {
 					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
 				case 'blocklist': 
-					teks = '𝗕𝗟𝗢𝗖𝗞 𝗟𝗜𝗦𝗧 👾𝗔𝗥𝟭𝟱𝗕𝗢𝗧👾  :\n'
+					teks = '𝗕𝗟𝗢𝗖𝗞 𝗟𝗜𝗦𝗧 :\n'
 					for (let block of blocked) {
 						teks += `┣➢ @${block.split('@')[0]}\n`
 					}
@@ -559,12 +550,12 @@ client.on('group-participants-update', async (anu) => {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						buff = await client.downloadMediaMessage(encmedia)
 						for (let _ of anu) {
-							client.sendMessage(_.jid, buff, image, {caption: `❮ 𝙋𝙀𝙎𝘼𝙉 𝘽𝙍𝙊𝘼𝘿𝘾𝘼𝙎𝙏 👾𝗔𝗥𝟭𝟱𝗕𝗢𝗧👾 ❯\n\n${body.slice(4)}`})
+							client.sendMessage(_.jid, buff, image, {caption: `❮ 𝙋𝙀𝙎𝘼𝙉 𝘽𝙍𝙊𝘼𝘿𝘾𝘼𝙎𝙏 ❯\n\n${body.slice(4)}`})
 						}
 						reply('𝙨𝙪𝙘𝙘𝙚𝙨𝙨 𝙗𝙧𝙤𝙖𝙙𝙘𝙖𝙨𝙩 ')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `❮ 𝙋𝙀𝙎𝘼𝙉 𝘽𝙍𝙊𝘼𝘿𝘾𝘼𝙎𝙏 👾𝗔𝗥𝟭𝟱𝗕𝗢𝗧👾 ❯\n\n${body.slice(4)}`)
+							sendMess(_.jid, `❮ 𝙋𝙀𝙎𝘼𝙉 𝘽𝙍𝙊𝘼𝘿𝘾𝘼𝙎𝙏 ❯\n\n${body.slice(4)}`)
 						}
 						reply('𝙨𝙪𝙘𝙘𝙚𝙨𝙨 𝙗𝙧𝙤𝙖𝙙𝙘𝙖𝙨𝙩 ')
 					}
@@ -797,19 +788,6 @@ client.on('group-participants-update', async (anu) => {
 
                      
 /*
-*ARIS187 ID
-*ARIS187 ID
-*ARIS187 ID
-*ANAK ANJING MAU NGAPAIN?
-*HARGAIN CREATOR 
-*GUA SUSAH PAYAH BUAT,KALIAN CUMAN MODAL NAMA SU
-*TANPA KASIH CREDITS LAGI,,,,NYESEK SU ASU
-*DIBILANG JANGAN UBAH INFO!!
-*KASIH GUA CREDITS SEDIKIT BANGKE
-*ANAK HARAM MANA MUNGKIN NURUT XIXIXIXXI
-*ARIS187 ID
-*ARIS187 ID
-*ARIS187ID
-*Thanks for Mank Bar bar
+*Thanks For 𝗠𝗵𝗮𝗻𝗸𝗕𝗮𝗿𝗕𝗮𝗿
 */
 
