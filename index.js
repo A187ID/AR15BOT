@@ -492,9 +492,14 @@ client.on('group-participants-update', async (anu) => {
 					})
 					break
 				case 'fitnah':	
-				case 'fake': // tuh costum reply
-              costum('Ini', '6285722553839@s.whatsapp.com')
-                  break	
+				case 'fake':          
+if (!isGroup) return reply(mess.only.group)
+arg = body.substring(body.indexOf(' ') + 1)
+				isi = arg.split(' |')[0] 
+				pesan = arg.split('|')[1] 
+				pesan2 = arg.split('|')[2] 
+costum(pesan, isi, pesan2)
+break
                  case 'linkgc':	 
                 if (!isGroup) return reply(mess.only.group)
 				if (!isGroupAdmins) return reply(mess.only.admin) 
